@@ -17,11 +17,15 @@ a {
 p {
    font-size: 25px;
    font-family:Arial, sans-serif;
-    text-align:center;
 }
 
 img{
   width:100%;
+}
+
+
+p{
+  text-align:center;
 }
 
 div img{
@@ -31,16 +35,36 @@ div img{
     margin:auto;
 }
 
-/* Query #1 will trigger at 772px and act as your "Tablet View" */
-@media (min-width: 772px) {
-    div{display: inline-block;
-        width: 45vw;}
-    img {max-height: 30vh;
-         width: auto;} }
+div{
+  display: inline-block;
+  width: 24%;
+  margin: 5px;
+  padding: 2px;
+}
 
-/* Query #2 will trigger at 998px  and act as your "Large Screen  View" */
-@media (min-width: 998px) {
-    div{width: 30vw;} }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
