@@ -46,8 +46,9 @@ figure img{
     margin: auto;
 }
 
-
 figcaption {
+    font-family:Graphik, sans-serif;
+    font-size: 20px;
     text-align: center;
 }
 
