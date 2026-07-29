@@ -24,20 +24,28 @@ img{
   width:100%;
 }
 
-div img{
+figure img{
     width:150px;
     height: 150px;
     display:block;
     margin:auto;
 }
 
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+}
+
 /* Query #1: Tablet View */
 @media (min-width: 772px) {
-    div {
+    figure {
         display: inline-block;
         width: 45vw;
     }
-    div img {
+    figure img {
         max-height: 30vh;
         width: auto;
     }
@@ -45,7 +53,7 @@ div img{
 
 /* Query #2: Large Screen View */
 @media (min-width: 998px) {
-    div {
+    figure {
         width: 30vw;
     }
 }
