@@ -75,7 +75,7 @@ figcaption {
 }
 
 /* Query #2: Large Screen View (992px) */
-@media (min-width: 998px) {
+@media (min-width: 992px) {
     grid {
         grid-template-columns: repeat(3, 1fr);
     }
