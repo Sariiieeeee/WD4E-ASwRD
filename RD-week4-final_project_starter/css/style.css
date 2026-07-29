@@ -1,22 +1,26 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #dedede;
 }
 
 h1 {
     text-align: center;
-    font-family:Arial, sans-serif;
+    font-family:Graphik, sans-serif;
     font-size: 32px;
 }
 
 a {
     color: #000;
     text-decoration: none;
-    font-family:Arial, sans-serif;
+    font-family:Graphik, sans-serif;
 }
 
 p {
    font-size: 25px;
-   font-family:Arial, sans-serif;
+   font-family:Graphik, sans-serif;
     text-align:center;
 }
 
@@ -24,41 +28,74 @@ img{
   width:100%;
 }
 
-figure img{
-    width:150px;
-    height: 150px;
-    display:block;
-    margin:auto;
+/* Mobile-first: single column grid, 10px gap */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
 
 figure {
     margin: 0;
 }
 
+figure img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+
 figcaption {
     text-align: center;
 }
 
-/* Query #1: Tablet View */
+/* Query #1: Tablet View (772px) */
 @media (min-width: 772px) {
-    figure {
-        display: inline-block;
-        width: 45vw;
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    figure img {
-        max-height: 30vh;
-        width: auto;
+    
+    figure {
+       border-radius: 50%;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+    }
+
+    figure:last-of-type {
+        grid-column: span 2;
     }
 }
 
-/* Query #2: Large Screen View */
+/* Query #2: Large Screen View (992px) */
 @media (min-width: 998px) {
+    grid {
+        grid-template-colums: repeat(3, 1fr);
+    }
+    figure:nth-of-type(3n) {
+        grid-column: span 2;
+    }
     figure {
-        width: 30vw;
+        border-radius: 0;
     }
 }
 
+/* Query #3: Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
 
+/* Query #4: Dark color scheme preference */
+@media (prefers-color-scheme: dark) {
+    figure {
+        background-color: #222222;
+        color: #ffe680;
+        border: 2px solid #000000;
+    }
+}
 
 /*
 main {
